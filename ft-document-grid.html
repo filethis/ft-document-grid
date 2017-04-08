@@ -1,6 +1,9 @@
 <link rel="import" href="../polymer/polymer.html">
 
 <link rel="import" href="../iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../iron-list/iron-list.html">
+
+<link rel="import" href="../ft-document-grid-item/ft-document-grid-item.html">
 
 <!--
 `ft-document-grid`
@@ -15,9 +18,21 @@ An element that renders a list of FileThis document items in a grid layout.
 
     <template>
 
-        <div>
-            ft-document-grid
-        </div>
+        <iron-list selection-enabled
+                   grid
+                   id="documentGrid"
+                   items="[[documents]]"
+                   selected-item="{{selectedDocument}}"
+                   as="item">
+
+            <!-- Document item template -->
+            <template>
+                <ft-document-grid-item
+                        document="[[item]]"
+                        selected$="[[selected]]">
+                </ft-document-grid-item>
+            </template>
+        </iron-list>
 
     </template>
 
@@ -27,6 +42,29 @@ An element that renders a list of FileThis document items in a grid layout.
             is: 'ft-document-grid',
 
             properties: {
+
+                /** The list of document resources to be be displayed. */
+                documents:
+                {
+                    type: Array,
+                    notify: true,
+                    value: [],
+                    observer: "_onDocumentsChanged"
+                },
+
+                /** The currently-selected document, if any. */
+                selectedDocument:
+                {
+                    type: Object,
+                    notify: true,
+                    value: null
+                }
+            },
+
+            _onDocumentsChanged: function()
+            {
+                // Hack for some kind of bug in iron-list
+                this.async(function() { this.$.documentGrid.fire('iron-resize'); }, 1);
             }
 
         });

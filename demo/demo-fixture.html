@@ -2,13 +2,14 @@
 
 <!-- Imports -->
 <link rel="import" href="../../polymer/polymer.html">
+<link rel="import" href="../../paper-button/paper-button.html">
 
 <link rel="import" href="../ft-document-grid.html">
 
 
 <!--
 
-An element that renders a list of FileThis document items in a grid layout.
+An element that renders a grid of FileThis documents
 
 @demo demo/index.html
  -->
@@ -18,7 +19,11 @@ An element that renders a list of FileThis document items in a grid layout.
 
     <template>
 
-        <ft-document-grid></ft-document-grid>
+        <div class="layout vertical center">
+            <ft-document-grid id="grid"
+                              style="overflow:hidden; overflow-y:scroll; border:1px solid #DDD; width:563px;height:400px">
+            </ft-document-grid>
+        </div>
 
     </template>
 
@@ -30,6 +35,29 @@ An element that renders a list of FileThis document items in a grid layout.
 
             properties:
             {
+            },
+
+            ready: function()
+            {
+                this._loadFakeDocuments();
+            },
+
+            _loadFakeDocuments: function()
+            {
+                var path = "fake-documents.json";
+
+                var xmlHttpRequest = new XMLHttpRequest();
+                xmlHttpRequest.overrideMimeType("application/json");
+                xmlHttpRequest.open('GET', path, true);
+                xmlHttpRequest.onreadystatechange = function()
+                {
+                    if (xmlHttpRequest.readyState == 4 &&
+                        xmlHttpRequest.status == "200")
+                    {
+                        grid.documents = JSON.parse(xmlHttpRequest.responseText);
+                    }
+                };
+                xmlHttpRequest.send();
             }
 
         });
