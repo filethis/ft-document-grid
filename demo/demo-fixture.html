@@ -68,8 +68,8 @@ An element that renders a grid of FileThis documents
                 xmlHttpRequest.open('GET', path, true);
                 xmlHttpRequest.onreadystatechange = function()
                 {
-                    if (xmlHttpRequest.readyState == 4 &&
-                        xmlHttpRequest.status == "200")
+                    if (xmlHttpRequest.readyState === 4 &&
+                        xmlHttpRequest.status === 200)
                     {
                         grid.documents = JSON.parse(xmlHttpRequest.responseText);
                     }
