@@ -78,7 +78,7 @@ An element that renders a list of FileThis document items in a grid layout.
                 }
             },
 
-            _onDocumentsChanged: function()
+            _onDocumentsChanged: function(to, from)
             {
                 // Hack for some kind of bug in iron-list
                 this.async(function() { this.$.documentGrid.fire('iron-resize'); }, 1);
