@@ -35,6 +35,12 @@ An element that renders a list of FileThis document items in a grid layout.
 
     <template>
 
+        <style>
+            :host {
+                display:block;
+            }
+        </style>
+
         <iron-list selection-enabled
                    grid
                    id="documentGrid"
