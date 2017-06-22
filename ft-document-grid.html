@@ -72,7 +72,8 @@ An element that renders a list of FileThis document items in a grid layout.
                 {
                     type: Array,
                     notify: true,
-                    value: []
+                    value: [],
+                    observer: "_onDocumentsChanged"
                 },
 
                 /** The currently-selected document, if any. */
@@ -82,6 +83,11 @@ An element that renders a list of FileThis document items in a grid layout.
                     notify: true,
                     value: null
                 }
+            },
+
+            _onDocumentsChanged: function(to, from)
+            {
+                this.$.documentGrid.fire('resize')
             }
 
         });
