@@ -1,7 +1,10 @@
-[_Demo and API docs_](https://filethis.github.io/ft-document-grid/components/ft-document-grid/)
+[Demo](https://filethis.github.io/ft-document-grid/components/ft-document-grid/demo/)    [API](https://filethis.github.io/ft-document-grid/components/ft-document-grid/)    [Repo](https://github.com/filethis/ft-document-grid)
 
 ### \<ft-document-grid\>
 
------------------------------------------------------------
+This element displays a grid layout of FileThis [document resources](https://filethis.com/developers/doc/index.html#/documents).
 
-An element that renders a list of FileThis document items in a grid layout.
+By default, it uses [ft-document-grid-item](https://github.com/filethis/ft-document-grid-item) elements to represent each row.
+
+It is used by the [ft-document-panel](https://github.com/filethis/ft-document-panel) element.
+
