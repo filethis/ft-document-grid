@@ -4,7 +4,7 @@
 
 This element displays a grid layout of FileThis [document resources](https://filethis.com/developers/doc/index.html#/documents).
 
-By default, it uses [ft-document-grid-item](https://github.com/filethis/ft-document-grid-item) elements to represent each row.
+By default, it uses [ft-document-grid-item](https://github.com/filethis/ft-document-grid-item) elements to render each row.
 
 It is used by the [ft-document-panel](https://github.com/filethis/ft-document-panel) element.
 
