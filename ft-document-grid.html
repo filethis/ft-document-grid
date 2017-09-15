@@ -39,8 +39,8 @@ This element displays a grid layout of FileThis document resources.
             }
         </style>
 
-        <iron-list selection-enabled
-                   grid
+        <iron-list grid
+                   selection-enabled
                    id="documentGrid"
                    style="background-color:white"
                    items="[[documents]]"
@@ -63,6 +63,10 @@ This element displays a grid layout of FileThis document resources.
 
             is: 'ft-document-grid',
 
+            behaviors: [
+                Polymer.IronResizableBehavior
+            ],
+
             properties: {
 
                 /** The list of document resources to be be displayed. */
@@ -81,11 +85,6 @@ This element displays a grid layout of FileThis document resources.
                     notify: true,
                     value: null
                 }
-            },
-
-            _onDocumentsChanged: function(to, from)
-            {
-                this.$.documentGrid.fire('resize')
             }
 
         });

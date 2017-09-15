@@ -4,6 +4,7 @@
   "main": "ft-document-grid.html",
   "dependencies": {
     "ft-document-grid-item": "filethis/ft-document-grid-item#^0.0.13",
+    "ft-element-demo": "filethis/ft-element-demo#^0.0.1",
     "iron-label": "PolymerElements/iron-label#1 - 2",
     "iron-list": "PolymerElements/iron-list#1 - 2",
     "polymer": "Polymer/polymer#1.9 - 2"
