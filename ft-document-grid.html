@@ -36,15 +36,14 @@ This element displays a grid layout of FileThis document resources.
         <style>
             :host {
                 display:block;
-                width:100%;
-                height:100%;
+                @apply --layout-vertical;
             }
         </style>
 
         <iron-list grid
                    selection-enabled
                    id="documentGrid"
-                   style="width:100%; height:100%; "
+                   class="flex"
                    style="background-color:white"
                    items="[[documents]]"
                    selected-item="{{selectedDocument}}"
@@ -66,10 +65,6 @@ This element displays a grid layout of FileThis document resources.
 
             is: 'ft-document-grid',
 
-            behaviors: [
-                Polymer.IronResizableBehavior
-            ],
-
             properties: {
 
                 /** The list of document resources to be be displayed. */
@@ -77,8 +72,7 @@ This element displays a grid layout of FileThis document resources.
                 {
                     type: Array,
                     notify: true,
-                    value: [],
-                    observer: "_onDocumentsChanged"
+                    value: []
                 },
 
                 /** The currently-selected document, if any. */
