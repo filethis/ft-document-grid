@@ -3,8 +3,8 @@
   "description": "An element that renders a list of FileThis document items in a grid layout.",
   "main": "ft-document-grid.html",
   "dependencies": {
-    "ft-document-grid-item": "filethis/ft-document-grid-item#^0.0.13",
-    "ft-element-demo": "filethis/ft-element-demo#^0.0.1",
+    "ft-document-grid-item": "filethis/ft-document-grid-item#^0.0.14",
+    "ft-element-demo": "filethis/ft-element-demo#^0.0.2",
     "iron-label": "PolymerElements/iron-label#1 - 2",
     "iron-list": "PolymerElements/iron-list#1 - 2",
     "polymer": "Polymer/polymer#1.9 - 2"
