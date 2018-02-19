@@ -1,6 +1,6 @@
 # Project configuration
 NAME=ft-document-grid
-VERSION=0.0.20
+VERSION=0.0.21
 LOCAL_PORT=3641
 GITHUB_USER=filethis
 GITHUB_USER_ABBREV=ft
