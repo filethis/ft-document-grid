@@ -35,18 +35,21 @@ This element displays a grid layout of FileThis document resources.
 
         <style>
             :host {
-                display:block;
-                overflow:hidden;
+                display: block;
+                overflow: hidden;
                 @apply --layout-vertical;
                 @apply --ft-document-grid;
+            }
+            .grid {
+                background-color: white;
+                @apply --ft-connection-grid-grid;
             }
         </style>
 
         <iron-list grid
                    selection-enabled
                    id="documentGrid"
-                   class="flex"
-                   style="background-color:white"
+                   class="grid flex"
                    items="[[documents]]"
                    selected-item="{{selectedDocument}}"
                    as="item">
