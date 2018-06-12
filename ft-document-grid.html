@@ -40,25 +40,27 @@ This element displays a grid layout of FileThis document resources.
                 @apply --layout-vertical;
                 @apply --ft-document-grid;
             }
-            .grid {
+            #documentGrid {
                 background-color: white;
                 @apply --ft-connection-grid-grid;
             }
         </style>
 
-        <iron-list grid
-                   selection-enabled
-                   id="documentGrid"
-                   class="grid flex"
-                   items="[[documents]]"
-                   selected-item="{{selectedDocument}}"
-                   as="item">
-
+        <iron-list
+            id="documentGrid"
+            grid
+            class="flex"
+            selection-enabled
+            items="[[documents]]"
+            selected-item="{{selectedDocument}}"
+            as="item"
+        >
             <!-- Document item template -->
             <template>
                 <ft-document-grid-item
-                        document="[[item]]"
-                        selected$="[[selected]]">
+                    document="[[item]]"
+                    selected$="[[selected]]"
+                >
                 </ft-document-grid-item>
             </template>
         </iron-list>
