@@ -1,7 +1,7 @@
 {
   "description": "An element that renders a list of FileThis document items in a grid layout.",
-  "name": "filethis/ft-document-grid",
-  "version": "filethis/1.0.26",
+  "name": "ft-document-grid",
+  "version": "1.0.26",
   "resolutions": {
     "inherits": "2.0.3",
     "samsam": "1.1.3",
