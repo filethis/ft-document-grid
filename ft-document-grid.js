@@ -25,13 +25,13 @@ This element displays a grid layout of FileThis document resources.
   from HTML and may be out of place here. Review them and
   then delete this comment!
 */
-import 'ft-document-grid-item/ft-document-grid-item.js';
-
 import '@polymer/iron-flex-layout/iron-flex-layout-classes.js';
 import '@polymer/iron-list/iron-list.js';
 import '@polymer/polymer/polymer-legacy.js';
 import { Polymer } from '@polymer/polymer/lib/legacy/polymer-fn.js';
 import { html } from '@polymer/polymer/lib/utils/html-tag.js';
+import 'ft-document-grid-item/ft-document-grid-item.js';
+
 Polymer({
   _template: html`
         <style include="iron-flex iron-flex-alignment iron-positioning"></style>
