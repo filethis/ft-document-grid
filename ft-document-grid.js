@@ -30,7 +30,7 @@ import '@polymer/iron-list/iron-list.js';
 import '@polymer/polymer/polymer-legacy.js';
 import { Polymer } from '@polymer/polymer/lib/legacy/polymer-fn.js';
 import { html } from '@polymer/polymer/lib/utils/html-tag.js';
-import 'ft-document-grid-item/ft-document-grid-item.js';
+import '@filethis/ft-document-grid-item/ft-document-grid-item.js';
 
 Polymer({
   _template: html`
