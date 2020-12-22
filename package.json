@@ -1,7 +1,7 @@
 {
   "description": "An element that renders a list of FileThis document items in a grid layout.",
   "name": "@filethis/ft-document-grid",
-  "version": "1.0.26",
+  "version": "3.0.0",
   "resolutions": {
     "inherits": "2.0.3",
     "samsam": "1.1.3",
@@ -31,8 +31,8 @@
     "@polymer/iron-list": "^3.0.0",
     "@polymer/paper-button": "^3.0.0",
     "@polymer/polymer": "^3.0.0",
-    "@filethis/ft-document-grid-item": "^1.0.24",
-    "@filethis/ft-element-demo": "^1.0.15"
+    "@filethis/ft-document-grid-item": "^3.0.0",
+    "@filethis/ft-element-demo": "^3.0.0"
   },
   "devDependencies": {
     "@polymer/iron-component-page": "^4.0.0",
