@@ -1,9 +1,0 @@
-{
-  "version": "v1",
-  "packages": {
-    "ft-document-grid-item": {
-      "signature": "50349acc0c5aa5446dbd977b8e6734d4",
-      "file": true
-    }
-  }
-}
